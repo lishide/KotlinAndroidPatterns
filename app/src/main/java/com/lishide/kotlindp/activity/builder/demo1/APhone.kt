@@ -1,4 +1,4 @@
-package com.lishide.kotlindp.activity.builder
+package com.lishide.kotlindp.activity.builder.demo1
 
 /**
  * Created by bz on 2018/3/17.
