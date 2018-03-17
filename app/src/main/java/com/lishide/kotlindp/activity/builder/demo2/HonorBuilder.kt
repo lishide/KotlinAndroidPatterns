@@ -2,7 +2,7 @@ package com.lishide.kotlindp.activity.builder.demo2
 
 /**
  * Created by lishide on 18-3-17.
- * 具体的 Builder 类，HonorBuilder
+ * 具体的 Builder 类，HonorBuilder，实现产品的创建
  */
 class HonorBuilder : Builder() {
     private val mMobile = HonorMobile()

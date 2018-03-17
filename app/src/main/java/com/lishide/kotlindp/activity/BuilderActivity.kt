@@ -12,6 +12,13 @@ import kotlinx.android.synthetic.main.include_title.*
 /**
  * Created by lishide on 18-3-17.
  * 建造者模式 Demo
+ * 1. 定义
+ * 建造者模式(Builder Pattern)：将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。
+ * 2. 结构
+ * Product：产品角色；
+ * Director：指挥者，利用具体建造者创建产品；
+ * AbstractBuilder：抽象建造者，定义抽象的建造方法；
+ * ConcreteBuilder：具体建造者，实现建造方法；
  */
 class BuilderActivity : AppCompatActivity() {
 
