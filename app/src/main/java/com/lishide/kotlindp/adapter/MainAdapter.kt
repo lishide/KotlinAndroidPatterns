@@ -4,8 +4,10 @@ import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.util.SparseArray
 import android.view.ViewGroup
+import com.lishide.kotlindp.activity.BuilderActivity
 import com.lishide.kotlindp.entity.ListItemInfo
 import com.lishide.kotlindp.holder.MainItemHolder
+import org.jetbrains.anko.startActivity
 
 class MainAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -46,7 +48,9 @@ class MainAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.ViewHold
             it.tvTitle.text = data.title
             it.tvSubTitle.text = data.subTitle
             it.itemView.setOnClickListener {
-
+                when (position) {
+                    0 -> mContext.startActivity<BuilderActivity>()
+                }
             }
         }
     }
