@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.util.SparseArray
 import android.view.ViewGroup
 import com.lishide.kotlindp.activity.BuilderActivity
+import com.lishide.kotlindp.activity.FactoryActivity
 import com.lishide.kotlindp.entity.ListItemInfo
 import com.lishide.kotlindp.holder.MainItemHolder
 import org.jetbrains.anko.startActivity
@@ -50,6 +51,7 @@ class MainAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.ViewHold
             it.itemView.setOnClickListener {
                 when (position) {
                     0 -> mContext.startActivity<BuilderActivity>()
+                    1 -> mContext.startActivity<FactoryActivity>()
                 }
             }
         }

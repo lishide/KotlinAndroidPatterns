@@ -18,7 +18,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.BuilderActivity" />
         <activity android:name=".activity.KotlinDemoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -31,6 +30,8 @@
                     android:scheme="kadp" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.BuilderActivity" />
+        <activity android:name=".activity.FactoryActivity" />
     </application>
 
 </manifest>

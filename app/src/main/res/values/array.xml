@@ -2,10 +2,12 @@
 <resources>
     <!--首页列表数据-->
     <string-array name="main_item_title">
-        <item>0. 建造者模式</item>
+        <item>1. 建造者模式</item>
+        <item>2. 工厂方法模式</item>
     </string-array>
 
     <string-array name="main_item_des">
-        <item>0. 建造者模式演示</item>
+        <item>1. 建造者模式演示</item>
+        <item>2. 工厂方法模式（简单工厂）演示</item>
     </string-array>
 </resources>
