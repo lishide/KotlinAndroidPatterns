@@ -20,6 +20,7 @@ class FactoryActivity : AppCompatActivity() {
         mToolbar.setNavigationOnClickListener({ onBackPressed() })
         toolbarTitle.text = "工厂方法模式"
 
+        println("----------工厂方法模式 start----------")
         var factory1: Factory = ConcreteFactoryA()
         var product1 = factory1.factoryMethod()
         product1.print()
@@ -27,8 +28,11 @@ class FactoryActivity : AppCompatActivity() {
         factory1 = ConcreteFactoryB()
         product1 = factory1.factoryMethod()
         product1.print()
+        println("----------工厂方法模式   end----------")
 
 
+        // ===================================================== //
+        println("----------简单工厂模式 start----------")
         val factory = SimpleFactory()
         var product: Product? = factory.createProduct("A")
         if (product != null) {
@@ -42,5 +46,6 @@ class FactoryActivity : AppCompatActivity() {
         if (product != null) {
             product.print()
         }
+        println("----------简单工厂模式   end----------")
     }
 }
