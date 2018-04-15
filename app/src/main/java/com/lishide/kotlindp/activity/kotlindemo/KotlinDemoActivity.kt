@@ -1,4 +1,4 @@
-package com.lishide.kotlindp.activity
+package com.lishide.kotlindp.activity.kotlindemo
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -9,7 +9,19 @@ import java.lang.Integer.parseInt
  * Created by bz on 2018/3/21.
  * Kotlin 语言演示
  */
-class KotlinDemoActivity : AppCompatActivity() {
+class KotlinDemoActivity : AppCompatActivity(), MyInterface {
+
+    override val prop: Int = 29
+
+    // 非必需
+    override val propertyWithImplementation: String
+        get() = super.propertyWithImplementation
+
+    // 非必需
+    override fun foo() {
+        super.foo()
+        println("foo 111")
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +30,8 @@ class KotlinDemoActivity : AppCompatActivity() {
         whenExpressionTest(2)
         whenNoParamTest("test", -1)
         forTest()
+
+        dataTest()
     }
 
     private fun whenExpressionTest(x: Int) {
@@ -53,5 +67,17 @@ class KotlinDemoActivity : AppCompatActivity() {
         for (i in array.indices) {
             println(array[i])
         }
+    }
+
+    /**
+     * 数据类演示
+     */
+    private fun dataTest() {
+
+        val kotlin = User("kotlin", 1)
+        println(kotlin)
+
+        val kotlin2 = kotlin.copy(age = 2)
+        println(kotlin2)
     }
 }
