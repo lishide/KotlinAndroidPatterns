@@ -18,4 +18,20 @@
         android:layout_marginTop="16dp"
         android:text="工厂方法模式演示，请看 Logcat 输出"
         android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/ivDp1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="8dp"
+        android:scaleType="fitXY"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/ivDp2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="8dp"
+        android:scaleType="fitXY"
+        tools:ignore="ContentDescription" />
 </LinearLayout>

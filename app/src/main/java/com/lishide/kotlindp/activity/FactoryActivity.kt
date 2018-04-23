@@ -3,8 +3,10 @@ package com.lishide.kotlindp.activity
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.lishide.kotlindp.R
 import com.lishide.kotlindp.activity.factory.*
+import kotlinx.android.synthetic.main.activity_factory.*
 import kotlinx.android.synthetic.main.include_title.*
 
 /**
@@ -21,6 +23,16 @@ class FactoryActivity : AppCompatActivity() {
         mToolbar.setNavigationOnClickListener({ onBackPressed() })
         mToolbar.setTitleTextColor(Color.WHITE)
         mToolbar.title = "工厂方法模式"
+
+        val dp1 = "http://p6wpxhpqt.bkt.clouddn.com/img_dp_FactoryMethod.jpg"
+        val dp2 = "http://p6wpxhpqt.bkt.clouddn.com/img_dp_SimpleFactory.jpg"
+        Glide.with(this)
+                .load(dp1)
+                .into(ivDp1)
+
+        Glide.with(this)
+                .load(dp2)
+                .into(ivDp2)
 
         println("----------工厂方法模式 start----------")
         var factory1: Factory = ConcreteFactoryA()
