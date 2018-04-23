@@ -4,10 +4,12 @@
     <string-array name="main_item_title">
         <item>1. 建造者模式</item>
         <item>2. 工厂方法模式</item>
+        <item>3. 抽象工厂模式</item>
     </string-array>
 
     <string-array name="main_item_des">
         <item>1. 建造者模式演示</item>
         <item>2. 工厂方法模式（简单工厂）演示</item>
+        <item>3. 抽象工厂模式演示</item>
     </string-array>
 </resources>

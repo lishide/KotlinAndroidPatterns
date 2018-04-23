@@ -4,6 +4,7 @@ import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.util.SparseArray
 import android.view.ViewGroup
+import com.lishide.kotlindp.activity.AbstractFactoryActivity
 import com.lishide.kotlindp.activity.BuilderActivity
 import com.lishide.kotlindp.activity.FactoryActivity
 import com.lishide.kotlindp.entity.ListItemInfo
@@ -52,6 +53,7 @@ class MainAdapter(context: Context) : RecyclerView.Adapter<RecyclerView.ViewHold
                 when (position) {
                     0 -> mContext.startActivity<BuilderActivity>()
                     1 -> mContext.startActivity<FactoryActivity>()
+                    2 -> mContext.startActivity<AbstractFactoryActivity>()
                 }
             }
         }

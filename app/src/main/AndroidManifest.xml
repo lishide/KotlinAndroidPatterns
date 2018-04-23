@@ -39,6 +39,7 @@
         </activity>
         <activity android:name=".activity.BuilderActivity" />
         <activity android:name=".activity.FactoryActivity" />
+        <activity android:name=".activity.AbstractFactoryActivity" />
     </application>
 
 </manifest>
