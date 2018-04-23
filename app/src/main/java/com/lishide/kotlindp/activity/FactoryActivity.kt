@@ -1,5 +1,6 @@
 package com.lishide.kotlindp.activity
 
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.lishide.kotlindp.R
@@ -18,7 +19,8 @@ class FactoryActivity : AppCompatActivity() {
 
         mToolbar.setNavigationIcon(R.mipmap.ic_nav_back_white)
         mToolbar.setNavigationOnClickListener({ onBackPressed() })
-        toolbarTitle.text = "工厂方法模式"
+        mToolbar.setTitleTextColor(Color.WHITE)
+        mToolbar.title = "工厂方法模式"
 
         println("----------工厂方法模式 start----------")
         var factory1: Factory = ConcreteFactoryA()
