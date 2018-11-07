@@ -29,11 +29,18 @@ class KotlinDemoActivity : AppCompatActivity(), MyInterface {
 
         whenExpressionTest(2)
         whenNoParamTest("test", -1)
-        forTest()
+
+        forTest1()
+        forTest2()
+        forTest3()
+        forTest4()
 
         dataTest()
     }
 
+    /**
+     * when：任意表达式（而不只是常量） 作为分支条件
+     */
     private fun whenExpressionTest(x: Int) {
         val s = "2"
         when (x) {
@@ -42,26 +49,48 @@ class KotlinDemoActivity : AppCompatActivity(), MyInterface {
         }
     }
 
+    /**
+     *  when 也可以用来取代 if - else if 链
+     */
     private fun whenNoParamTest(x: String, y: Int) {
         when {
             x.isEmpty() -> println("x is empty")
-        // Kotlin 中，使用 str1 == str2，比较的只是字符串的内容，此处返回的是 true
+            // Kotlin 中，使用 str1 == str2，比较的只是字符串的内容，此处返回的是 true
             x == "test" -> println("x's text is test")
             y == -1 -> println("y is -1")
             else -> println("otherwise")
         }
     }
 
-    private fun forTest() {
-        //
-//        for (i in 8 downTo 1 step 2) {
-//            println(i)  // 输出“8642”，换行输出
-//        }
+    /**
+     * for 示例 1：整型区间
+     */
+    private fun forTest1() {
+        for (i in 1..4) println(i) // 输出“1234”
+    }
 
-//        for (i in 1 until 10) {   // i in [1, 10) 排除了 10
-//            print(i)
-//        }
+    /**
+     * for 示例 2：倒序迭代数字，步长为2
+     */
+    private fun forTest2() {
+        for (i in 8 downTo 1 step 2) {
+            println(i)  // 输出“8642”，换行输出
+        }
+    }
 
+    /**
+     * for 示例 3：不包括其结束元素的区间
+     */
+    private fun forTest3() {
+        for (i in 1 until 10) {   // i in [1, 10) 排除了 10
+            println(i)
+        }
+    }
+
+    /**
+     * for 示例 4：通过索引遍历一个数组或者一个 list
+     */
+    private fun forTest4() {
         val array = arrayOf("a", "b", "c")
 
         for (i in array.indices) {
